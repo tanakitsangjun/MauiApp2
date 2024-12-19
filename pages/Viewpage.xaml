@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.pages.Viewpage"
+             Title="Viewpage">
+<ScrollView>
+    
+    <VerticalStackLayout VerticalOptions="Center">
+        <!-- <Label 
+            Text="ok"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="red"
+            FontSize="Header"
+            FontAttributes="Bold"
+            /> -->
+        <!-- strokeShape= topleft topright bottomleft bottomright -->
+        <Border Padding="10"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                WidthRequest="500">
+            <Image   Source="maui.png"></Image>
+        </Border>
+        <Button Margin="0,10"
+                ImageSource="https://img.icons8.com/carbon-copy/100/new-post--v1.png"
+                Text="Click me!!"
+                WidthRequest="500"
+                HeightRequest="100"
+                BackgroundColor="Orange"
+                TextColor="Brown"
+                ContentLayout="Right, 10"
+                Clicked="Button_Clicked">
+        </Button>
+
+        <ImageButton WidthRequest="50"
+            Clicked="ImageButton_Clicked"
+                BackgroundColor="white"
+                Source="https://img.icons8.com/ios/50/camera.png"></ImageButton>
+
+                <Entry WidthRequest="250" IsPassword="true" Margin="0,10"></Entry>
+                <Entry WidthRequest="250" Margin="0,10"></Entry>
+                <Entry WidthRequest="250" Margin="0,10"></Entry>
+    </VerticalStackLayout>
+</ScrollView>
+</ContentPage>

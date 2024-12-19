@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.pages.loginpage"
+             Shell.NavBarIsVisible ="False"
+             Title="loginpage">
+
+    <Grid>
+        <Image Source="bac.png"
+               Aspect="AspectFill"></Image>
+
+        <VerticalStackLayout VerticalOptions="Center">
+            <Border Padding="20" WidthRequest="350"
+                    HeightRequest="400"
+                    BackgroundColor="white"
+                    
+                    StrokeShape="RoundRectangle 40,40">
+            <VerticalStackLayout>
+              
+                <Image
+                    Aspect="AspectFit"
+                    Source="maui.png"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    HeightRequest="140"
+                    WidthRequest="140" />
+
+                <Label TextColor="Black" Text="Username"></Label>
+                <Entry TextColor="Brown"  Placeholder="Enter your username" x:Name="username" Background="AntiqueWhite"></Entry>
+
+                <Label TextColor="Black" Text="Password"></Label>
+                <Entry TextColor="Brown" Placeholder="Enter your password" x:Name="pwd" Background="AntiqueWhite"></Entry>
+
+                <Button BackgroundColor="Orange" Clicked="Button_Clicked" TextColor="Brown" Text="Login" Margin="0,10"></Button>
+
+                <FlexLayout JustifyContent="SpaceBetween" >
+                <Label TextColor="Brown" Text="Register "></Label>
+                <Label TextColor="Brown"   Text="Forget password">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                </FlexLayout>
+            </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>
