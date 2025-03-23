@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.pages.ShowDataPage"
+             xmlns:viewmodel="clr-namespace:MauiApp2.viewmodel"
+             x:DataType="viewmodel:ShowDataViewModel"
+             Title="ShowDataPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Data1</x:String>
+                        <x:String>Data1</x:String>
+                        <x:String>Data1</x:String>
+                        <x:String>Data1</x:String>
+                        <x:String>Data1</x:String>
+                        <x:String>Data1</x:String>
+                        <x:String>Data1</x:String>
+                        <x:String>Data1</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border>
+                                <Label Text="{Binding .}"></Label>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+    </VerticalStackLayout>
+</ContentPage>
